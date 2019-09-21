@@ -40,18 +40,18 @@ Class PfData
 		return preg_replace("/[^a-zA-Z0-9_]+/", "", $str); 
 	}
 
-	public static function filterText($string)
+	public static function filterText($str)
 	{
-		$string = str_replace("\r\n", '|l|b|', trim($string));
-		$string = filter_var(trim($string), FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_BACKTICK);
-		return str_replace('|l|b|', "\r\n", $string);
+		$str = str_replace("\r\n", '|l|b|', trim($str));
+		$str = filter_var(trim($str), FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_BACKTICK);
+		return str_replace('|l|b|', "\r\n", $str);
 	}
 
-	public static function encodeText($string)
+	public static function encodeText($str)
 	{
-		$string = str_replace("\r\n", '|l|b|', trim($string));
-		$string = filter_var(trim($string), FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW  | FILTER_FLAG_ENCODE_HIGH  | FILTER_FLAG_ENCODE_AMP );
-		return str_replace('|l|b|', "\r\n", $string);
+		$str = str_replace("\r\n", '|l|b|', trim($str));
+		$str = filter_var(trim($str), FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW  | FILTER_FLAG_ENCODE_HIGH  | FILTER_FLAG_ENCODE_AMP );
+		return str_replace('|l|b|', "\r\n", $str);
 	}
 
 	public static function filterCommaSeparatedNumbers($str){
