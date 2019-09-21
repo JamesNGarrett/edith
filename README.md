@@ -5,7 +5,7 @@ data dashboard skeleton
 
 ## PfData
 
-Description: A class static methods to filter and or transform strings and arrays to other formats. No state, no dependencies.  Prejudices towards minimal common use functions. Generally assumes Latin alphabet only. Unless otherwise noted, the functions take a single argument
+Description: A class static methods to filter and or transform strings and arrays to other formats. No state, no dependencies.  Prejudiced towards minimal common use functions, extend for more app specific methods. Generally assumes Latin alphabet only. Unless otherwise noted, the functions take a single argument either string or array as appropriate.
 
 ### Methods
 
@@ -22,11 +22,11 @@ String Filters
 * filterAlphaNumeric
 * filterAlphaNumericAndHyphen
 * filterAlphaNumericAndUnderscores
-* filterText // String All Html Tags while keeping linebreaks
-* encodeText // Encode All Html Tags while keeping linebreaks
+* filterText  -> strip all Html tags while keeping linebreaks
+* encodeText  -> encode all Html Tags while keeping linebreaks
 * filterCommaSeparatedNumbers
 
 String Modifiers
 
-* extractFirstBetween($str,$start,$end)
+* extractFirstBetween($str,$start,$end)  -> returns false if either start or end isn't found
 
